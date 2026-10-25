@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - run: npm install --no-audit --no-fund
+      # Loads each sample against the installed package; without arguments they print their usage and exit with 2.
+      - run: node validate.js || [ $? -eq 2 ]
+      - run: node read-to-memory.js || [ $? -eq 2 ]

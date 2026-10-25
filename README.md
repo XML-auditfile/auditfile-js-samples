@@ -26,3 +26,8 @@ Both examples accept continuation files after the first file:
 node validate.js <file.xaf> <continuation.xaf>
 node read-to-memory.js <file.xaf> <continuation.xaf>
 ```
+## Package versions
+
+The samples use one released version of the package, written exactly in `package.json`. Dependabot
+(`.github/dependabot.yml`) opens a pull request for each new release, and CI loads every sample against it before it
+is merged, so the samples follow the latest version.
