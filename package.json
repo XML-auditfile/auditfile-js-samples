@@ -1,0 +1,13 @@
+{
+  "name": "auditfile-js-samples",
+  "private": true,
+  "description": "Example programs for auditfile-js.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@xml-auditfile/auditfile": "0.1.0"
+  }
+}
