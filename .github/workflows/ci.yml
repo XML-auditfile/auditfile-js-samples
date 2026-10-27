@@ -22,3 +22,5 @@ jobs:
       # Loads each sample against the installed package; without arguments they print their usage and exit with 2.
       - run: node validate.js || [ $? -eq 2 ]
       - run: node read-to-memory.js || [ $? -eq 2 ]
+      # Also checks definitions/views.json and definitions/dialects.json against the package.
+      - run: node custom-definitions.js || [ $? -eq 2 ]
