@@ -8,6 +8,6 @@
     "node": ">=20"
   },
   "dependencies": {
-    "@xml-auditfile/auditfile": "0.0.4"
+    "@xml-auditfile/auditfile": "0.0.5"
   }
 }
